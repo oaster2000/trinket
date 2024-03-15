@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import './App.css';
+import WriteItems from "./components/items/WriteItems";
+import ReadItems from "./components/items/ReadItems";
+import Random from "./components/Random";
+import RandomTable from "./components/RandomTable";
+import Navigation from "./components/Navigation";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigation />
+      <div class="content">
+        <Routes>
+          <Route path="/" element={<br />} />
+          <Route path="/write/items" element={<WriteItems />} />
+          <Route path="/read" element={<ReadItems />} />
+          <Route path="/random/:id" element={<Random />} />
+          <Route path="/random/:id/:number" element={<RandomTable />} />
+        </Routes>
+      </div>
     </div>
   );
 }

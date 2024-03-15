@@ -1,38 +1,134 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+body {
   background-color: #282c34;
+  font-family: "Roboto", sans-serif;
   min-height: 100vh;
+}
+
+.random-container{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.item-container {
+  background: #839197;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 1%;
+  padding: 10px;
+  border-radius: 5px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item-container h1{
+  margin-top: 0px;
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.item-container h2{
+  margin: -10px;
+  margin-top: 2px;
+  padding-bottom: 10px;
+  font-size: 1.125rem;
+  text-align: center;
+}
+
+.item-container .common h2{
+  background-color: #4594aa;
+}
+
+.item-container .uncommon h2{
+  background-color: #45aa78;
+}
+
+.item-container .rare h2{
+  background-color: #5445aa;
+}
+
+.item-container p{
+  margin: -10px;
+  margin-top: 5px;
+  padding: 20px 5%;
+  font-size: 1.0625rem;
+  background-color: #a8b7bd;
+  border-radius: 0px 0px 5px 5px;
+  text-align: center;
+}
+
+button {
+  background-color: #cbd1dd;
+  font-size: 1.125rem;
+  font-family: "Roboto", sans-serif;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #727a8a;
+  
+}
+
+.random-container button{
+  padding: 5px 5%;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  position: fixed;
+  width: 100%;
+  background-color: #909ca0;
+  top: 0px;
+  height: 5%;
+  padding: 3px 10px;
+}
+
+.nav-bar .initial{
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  width: 50%;
+  height: 100%;
+}
+
+.nav-bar a{
+  flex: auto;
+  text-decoration: none;
+  color: #cbd1dd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: #465357;
+}
+
+.nav-bar a:hover{
+  background-color: rgb(94, 114, 121);
+}
+
+.content{
+  margin-top: 7%;
+}
+
+.nav-bar .container{
+  flex: auto;
+  height: 100%;
+}
+
+.nav-bar .container button{
+  flex: auto;
+  height: 100%;
 }
